@@ -40,6 +40,38 @@
 
 但是印象中算法导论有说过一个分治划分法，将区域划分成田字格一样的四份，可以以 `O(n)` 的时间复杂度找到k大。但是那个算法很复杂，而且debug困难，考虑到要吃午饭了，因此先咕咕咕
 
+实际算法：快速选择算法。类似快排，但是只负责划分与返回对应每次划分的偏移，不进行排序。
+
 ---
 
 老年人康复训练。争取把3和215用cpp的hash map以及堆重写一遍
+
+## C++ unordered_map
+
+插入:
+
+- `mp[value] = i`
+
+删除:
+
+- `mp.erase(s[i])`
+
+查找:
+
+- `mp.find(s[i]) != mp.end()`
+
+遍历:
+
+```c++
+for(auto it=map.begin();it!=map.end();it++){
+        cout<<it->first<<it->second<<endl;
+    }
+
+for(auto& kv:map){
+        cout<<kv.first<<kv.second<<endl;
+    }
+
+for(auto& [k,v]:map){
+        cout<<k<<v<<endl;
+    }
+```
