@@ -45,4 +45,4 @@ while((find=parentMap.find(curNode))!=parentMap.end()) // 查找代码
 
 经典折半查找
 
-先找失序点，接着对失序点两侧进行查找。
+先找失序点，接着对失序点两侧进行查找。时间复杂度 O(log(n))
