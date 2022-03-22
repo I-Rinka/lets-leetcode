@@ -67,3 +67,7 @@ sort(begin,end,[](int&a,int&b){return a>b;})
 总感觉数值分析好像学过。
 
 这边用例有可能溢出，所以mid最好用unsigned long long
+
+也可以从1开始查找
+
+用x/m<\m而不是m*m>x防止溢出
