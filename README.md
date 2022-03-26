@@ -26,6 +26,8 @@ Push me to update algorithm notes every day.
 
 ### hashmap
 
+`std::unordered_map`
+
 #### 遍历
 
 ```c++
@@ -34,6 +36,18 @@ for(auto &kv:hashmap)
   kv.first;kv.second;
 }
 ```
+
+#### 查找元素，判断是否存在
+
+`auto find=parentMap.find(key_element);`
+
+得到的find是pair*类型的，如果需要访问 `key` : `find->first`, 访问 `value` :  `find->second`
+
+```c++
+while((find=parentMap.find(element))!=parentMap.end()) // 查找代码
+```
+
+* 注意，不能直接 set.insert(*迭代器)。这里需要显示类型转换一下，把迭代器转换成元素才可以。
 
 #### 关于pair
 
@@ -44,3 +58,27 @@ reverse
 sort
 
 find
+
+### set
+
+#### 初始化
+
+std::set<int> numbers {8, 7, 6, 5, 4, 3, 2, 1};
+
+#### 遍历
+
+**注意！！！只能用`!=`而不是`<`**
+
+```c++
+for(auto i=st.begin();i!=st.end();i++)
+{
+
+}
+```
+
+#### 和vector互相转换
+
+set<type>st(vec.begin(),vec.end())
+vec.assing(st.begin(),st.end())
+
+vector<type>vec(st.begin(),st.end())
