@@ -24,6 +24,10 @@ Push me to update algorithm notes every day.
 
 ### 字符串操作
 
+转换成整数：
+
+
+
 ### hashmap
 
 `std::unordered_map`
