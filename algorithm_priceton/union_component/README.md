@@ -16,7 +16,7 @@ Avoid doing work until we have to.
 
     1. make union operation as connecting a forest
     2. Find Operation: Check if two components have the same root
-    3. Union Operation: Override the value of each component. Make the component's root index as the value.
+    3. Union Operation: Make a node's root connect to target node's root.
 
 In the worst situation, Find is O(n), but the Union is much faster.
 

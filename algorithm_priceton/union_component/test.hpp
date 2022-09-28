@@ -32,28 +32,16 @@ public:
 void test::run(union_component *UC)
 {
     char buffer[10];
-#ifdef DEBUG
-    printf("%s %d\n", __FILE__, __LINE__);
-#endif
-
     while (true)
     {
         int p, q;
         if (fgets(buffer, 9, stdin) == NULL)
         {
 
-#ifdef DEBUG
-            printf("%s %d\n", __FILE__, __LINE__);
-#endif
-
             break;
         }
         if (sscanf(buffer, "%d %d", &p, &q) == 2)
         {
-#ifdef DEBUG
-            printf("%s", buffer);
-            printf("%s %d\n", __FILE__, __LINE__);
-#endif
             // break;
             if (!UC->Find(p, q))
             {

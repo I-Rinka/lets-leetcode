@@ -50,6 +50,7 @@ int union_qunion::GetRoot(int node)
     int next = this->array[node];
     while (next != this->array[next])
     {
+        this->array[next]=this->array[this->array[next]]; // One Extra code to make every node directly connect to the root.
         next = this->array[next];
     }
     return next;
