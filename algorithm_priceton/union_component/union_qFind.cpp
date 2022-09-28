@@ -1,20 +1,20 @@
 #include "./test.hpp"
 
-class union_qfind : public union_component
+class union_qunion : public union_component
 {
 private:
     int *array;
     int size;
 
 public:
-    union_qfind(int num);
+    union_qunion(int num);
     void Show();
     void Union(int a, int b);
     bool Find(int a, int b);
 
-    ~union_qfind();
+    ~union_qunion();
 };
-void union_qfind::Show()
+void union_qunion::Show()
 {
 #ifdef DEBUG
     for (int i = 0; i < this->size; i++)
@@ -31,7 +31,7 @@ void union_qfind::Show()
 #endif
 }
 
-void union_qfind::Union(int a, int b)
+void union_qunion::Union(int a, int b)
 {
     if (a >= this->size || b >= this->size)
     {
@@ -46,7 +46,7 @@ void union_qfind::Union(int a, int b)
         }
     }
 }
-bool union_qfind::Find(int a, int b)
+bool union_qunion::Find(int a, int b)
 {
     if (this->array[a] == this->array[b])
     {
@@ -56,7 +56,7 @@ bool union_qfind::Find(int a, int b)
     return false;
 }
 
-union_qfind::union_qfind(int nums) : union_component(nums)
+union_qunion::union_qunion(int nums) : union_component(nums)
 {
     this->size = nums;
     this->array = new int[nums];
@@ -66,7 +66,7 @@ union_qfind::union_qfind(int nums) : union_component(nums)
     }
 }
 
-union_qfind::~union_qfind()
+union_qunion::~union_qunion()
 {
     delete this->array;
 }
@@ -76,7 +76,7 @@ int main(int argc, char const *argv[])
     printf("input counts:\n");
     int N;
     scanf("%d\n", &N);
-    union_component *UC = new union_qfind(N);
+    union_component *UC = new union_qunion(N);
     test *T = new test();
     T->run(UC);
     return 0;
